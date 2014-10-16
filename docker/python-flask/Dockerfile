@@ -7,7 +7,7 @@
 FROM ubuntu:trusty
 
 # File Author / Maintainer
-MAINTAINER Maintaner Name
+MAINTAINER Graeme
 
 # Add the application resources URL
 RUN echo "deb http://ie.archive.ubuntu.com/ubuntu/ trusty main universe" >> /etc/apt/sources.list
@@ -29,6 +29,7 @@ RUN pip install -r /my_application/requirements.txt
 
 # Expose ports
 EXPOSE 80
+EXPOSE 5000
 
 RUN mkdir /my_application/uploads
 
