@@ -2,9 +2,20 @@ from flask import Flask
 from flask import request
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
+def index():
+  return 'Index Page'
+
+@app.route(/hello)
 def hello():
-    return "Hello World!"
+  return 'Hello World'
+
+@app.route('/login',methods=['GET', 'POST'])
+def login():
+  if request.method == 'POST':
+    do_the_login()
+    else:
+      show_the_login_form()
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
